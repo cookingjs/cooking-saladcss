@@ -1,0 +1,26 @@
+{
+  "name": "cooking-saladcss",
+  "version": "0.0.0",
+  "description": "A cooking plugin.",
+  "keywords": [
+    "cooking"
+  ],
+  "scripts": {
+    "test": ""
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cookingjs/cooking-saladcss.git"
+  },
+  "homepage": "https://github.com/cookingjs/cooking-saladcss#readme",
+  "bugs": {
+    "url": "https://github.com/cookingjs/cooking-saladcss/issues"
+  },
+  "author": "qingwei-li<qingwei.li@ele.me>",
+  "license": "MIT",
+  "dependencies": {
+    "postcss": "^5.0.21",
+    "postcss-salad": "^1.0.0"
+  },
+  "devDependencies": {}
+}
