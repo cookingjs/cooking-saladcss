@@ -20,6 +20,7 @@
   "license": "MIT",
   "dependencies": {
     "postcss": "^5.0.21",
+    "postcss-loader": "^0.9.1",
     "postcss-salad": "^1.0.0"
   },
   "devDependencies": {}

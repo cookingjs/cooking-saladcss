@@ -7,6 +7,7 @@ module.exports = function (cooking, options) {
     require('postcss-salad')(options)
   ];
 
+  cooking.add('vue.autoprefixer', false)
   cooking.add('preLoader.postcss', {
     test: /\.css$/,
     loaders: ['postcss-loader']
