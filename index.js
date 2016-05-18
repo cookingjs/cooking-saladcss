@@ -3,9 +3,14 @@
  * @param  {*} options - custom option
  */
 module.exports = function (cooking, options) {
-  var plugins = [
-    require('postcss-salad')(options)
-  ];
+  var plugins = function (webpack) {
+    options = options || {}
+    options.features = options.features || {}
+    options.features.partialImport = options.features.partialImport || {}
+    options.features.partialImport.addDependencyTo = webpack
+
+    return [require('postcss-salad')(options)]
+  };
 
   cooking.add('vue.autoprefixer', false)
   cooking.add('preLoader.postcss', {
@@ -13,11 +18,6 @@ module.exports = function (cooking, options) {
     loaders: ['postcss-loader']
   });
 
-  cooking.add('postcss', function () {
-    return plugins
-  });
-
-  cooking.add('vue.postcss', function () {
-    return plugins
-  });
+  cooking.add('postcss', plugins);
+  cooking.add('vue.postcss', plugins);
 };
