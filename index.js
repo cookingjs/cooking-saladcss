@@ -7,10 +7,6 @@ module.exports = function (cooking, options) {
 
   var version = cooking.version
 
-  if (version >= '1.2.0') {
-    throw Error('不再支持该插件，请使用 postcss 配置文件进行配置，参考 https://github.com/michael-ciniawsky/postcss-load-config')
-  }
-
   version = version ? Number(version.split('.')[0]) : 0
 
   var plugins = function (webpack) {
