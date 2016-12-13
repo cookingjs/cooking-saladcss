@@ -23,8 +23,8 @@ module.exports = function (cooking, options) {
       test: /\.css$/,
       loaders: ['postcss-loader']
     })
-    cooking.add('vue.postcss', plugins)
   }
 
+  cooking.add('vue.postcss', plugins)
   cooking.add('postcss', plugins)
 }
